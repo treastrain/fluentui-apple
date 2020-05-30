@@ -7,7 +7,7 @@ let package = Package(
     defaultLocalization: "en",
     platforms: [
         .iOS(.v11),
-        // .macOS(.v10_13),
+        .macOS(.v10_13),
     ],
     pkgConfig: nil,
     providers: nil,
@@ -16,16 +16,17 @@ let package = Package(
             name: "FluentUI",
             targets: ["FluentUI"]),
     ],
-    dependencies: [],
+    dependencies: [
+        .package(path: "ios"),
+        .package(path: "macos"),
+    ],
     targets: [
         .target(
             name: "FluentUI",
-            dependencies: [],
-            path: "ios/FluentUI",
-            exclude: [
-                "Info.plist",
-                "Resources/Localization/CultureMapping.json",
+            dependencies: [
             ],
+            path: nil,
+            exclude: [],
             sources: nil,
             resources: nil,
             publicHeadersPath: nil,

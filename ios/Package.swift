@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "FluentUI",
+    name: "FluentUI-iOS",
     defaultLocalization: "en",
     platforms: [
         .iOS(.v11),
@@ -12,13 +12,13 @@ let package = Package(
     providers: nil,
     products: [
         .library(
-            name: "FluentUI",
-            targets: ["FluentUI"]),
+            name: "FluentUI-iOS",
+            targets: ["FluentUI-iOS"]),
     ],
     dependencies: [],
     targets: [
         .target(
-            name: "FluentUI",
+            name: "FluentUI-iOS",
             dependencies: [],
             path: "FluentUI",
             exclude: [
